@@ -26,7 +26,7 @@ impl CRUD for Post {
     posts::table
       .find(id)
       .first::<Post>(connection)
-      .expect("Error finding user by id")
+      .expect("Error finding post by id")
   }
 }
 
