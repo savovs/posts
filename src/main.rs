@@ -1,7 +1,9 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
-use rocket;
+#[macro_use]
+extern crate diesel;
 
+mod db;
 mod routes;
 
 fn main() {

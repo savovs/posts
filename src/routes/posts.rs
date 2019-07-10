@@ -1,6 +1,5 @@
 use rocket::get;
-use diesel;
-use diesel::prelude::*;
+use crate::db::{Connection};
 
 #[get("/")]
-pub fn get_posts() {}
+pub fn get_posts(connection: Connection) {}
