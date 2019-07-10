@@ -1,6 +1,8 @@
 use diesel::PgConnection;
 
-pub trait CRUD {
+pub trait Crud {
   fn create(&self, connection: &PgConnection);
-  fn read(id: i32, connection: &PgConnection) -> Self where Self: Sized;
+  fn get_by_id(id: i32, connection: &PgConnection) -> Self
+  where
+    Self: Sized;
 }
